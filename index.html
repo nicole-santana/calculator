@@ -6,13 +6,31 @@
     <title>Calculadora de Idade em Meses</title>
 </head>
 <body>
-    <h1>Calculadora de Idade em Meses</h1>
+    <header>
+        <h1>Calculadora de Idade em Meses</h1>
     
-    <label for="nascimento">Digite sua data de nascimento:</label>
-    <input type="date" id="nascimento">
-    <button onclick="calcularIdade()">Calcular</button>
+        <label for="nascimento">Digite sua data de nascimento:</label>
+        <input type="date" id="nascimento">
+        <button onclick="calcularIdade()">Calcular</button>
 
-    <p id="resultado" style="color: red;"></p>
+        <p id="resultado" style="color: red;"></p>
+    </header>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Cálculo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Teste data</td>
+                <td>Teste Cálculo</td>
+            </tr>
+        </tbody>
+    </table>
 
     <script src="script.js"></script>
 </body>
