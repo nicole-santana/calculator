@@ -3,7 +3,7 @@ function calcularIdade() {
     const valor = campo.value;
 
     if (!valor) {
-        document.getElementById('resultado').style.color = "red";
+        document.getElementById('resultado').style.color = "#35605a";
         document.getElementById('resultado').textContent = "Por favor, insira uma data válida.";
         return;
     }
@@ -12,7 +12,7 @@ function calcularIdade() {
     const hoje = new Date();
 
     if (dataNascimento > hoje) {
-        document.getElementById('resultado').style.color = "red";
+        document.getElementById('resultado').style.color = "#35605a";
         document.getElementById('resultado').textContent = "Erro, a data de nascimento não pode estar no futuro.";
         return;
     }
