@@ -4,6 +4,8 @@ function calcularIdade() {
 
     if (!valor) {
         document.getElementById('resultado').style.color = "#35605a";
+        document.getElementById('resultado').style.fontWeight = "700";
+        document.getElementById('resultado').style.textDecoration = "underline";
         document.getElementById('resultado').textContent = "Por favor, insira uma data válida.";
         return;
     }
@@ -13,6 +15,11 @@ function calcularIdade() {
 
     if (dataNascimento > hoje) {
         document.getElementById('resultado').style.color = "#35605a";
+        document.getElementById('resultado').style.fontWeight = "700";
+        document.getElementById('resultado').style.textDecoration = "underline";
+
+
+
         document.getElementById('resultado').textContent = "Erro, a data de nascimento não pode estar no futuro.";
         return;
     }
