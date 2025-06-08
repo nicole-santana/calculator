@@ -15,7 +15,7 @@ function tabela() {
         <td>${dataFormatada}</td>
         <td>${calculo}</td>
         <td>
-            <button>Excluir</button>
+            <button onClick="excluir()">Excluir</button>
             <button>Atualizar</button>
         </td>
     
@@ -34,25 +34,6 @@ function tabela() {
     linhasSalvas.push(novaLinha);
     localStorage.setItem("linhasSalvas", JSON.stringify(linhasSalvas));
 
-   //// let linhasSalvas = JSON.parse(localStorage.getItem("linhasSalvas"))|| [];
-
-    ///function salvar() {
-        //localStorage.setItem("linhasSalvas", JSON.stringify(linhasSalvas));
-    //}
-
-    //const novaLinha = {
-    ///    data: dataFormatada,
-    //    calculo: calculo
-    //};
-
-    //linhasSalvas.push(novaLinha);
-    //salvar();
-
-    
-
-
-
-    
 }
 
 function carregarLinhasSalvas() {
@@ -73,6 +54,4 @@ function carregarLinhasSalvas() {
     });
 }
 
-carregarLinhasSalvas(); // chama isso quando carregar a página
-
-
+carregarLinhasSalvas(); 
