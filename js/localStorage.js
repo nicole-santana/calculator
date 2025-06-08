@@ -25,6 +25,15 @@ function tabela() {
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
+    const novaLinha = {
+        data: dataFormatada,
+        calculo: calculo
+    };
+
+    let linhasSalvas = JSON.parse(localStorage.getItem("linhasSalvas")) || [];
+    linhasSalvas.push(novaLinha);
+    localStorage.setItem("linhasSalvas", JSON.stringify(linhasSalvas));
+
    //// let linhasSalvas = JSON.parse(localStorage.getItem("linhasSalvas"))|| [];
 
     ///function salvar() {
@@ -45,4 +54,25 @@ function tabela() {
 
     
 }
+
+function carregarLinhasSalvas() {
+    const corpoTabela = document.getElementById("corpoTabela");
+    const linhasSalvas = JSON.parse(localStorage.getItem("linhasSalvas")) || [];
+
+    linhasSalvas.forEach((linha) => {
+        const novaLinhaElemento = document.createElement("tr");
+        novaLinhaElemento.innerHTML = `
+            <td>${linha.data}</td>
+            <td>${linha.calculo}</td>
+            <td>
+                <button>Excluir</button>
+                <button>Atualizar</button>
+            </td>
+        `;
+        corpoTabela.appendChild(novaLinhaElemento);
+    });
+}
+
+carregarLinhasSalvas(); // chama isso quando carregar a página
+
 

@@ -2,11 +2,14 @@ function calcularIdade() {
     const campo = document.getElementById('nascimento');
     const valor = campo.value;
 
+    let status = "ok";
+
     if (!valor) {
         document.getElementById('resultado').style.color = "#35605a";
         document.getElementById('resultado').style.fontWeight = "700";
         document.getElementById('resultado').style.textDecoration = "underline";
         document.getElementById('resultado').textContent = "Por favor, insira uma data válida.";
+        status = "not ok";
         return;
     }
 
@@ -21,12 +24,18 @@ function calcularIdade() {
 
 
         document.getElementById('resultado').textContent = "Erro, a data de nascimento não pode estar no futuro.";
+        status = "not ok";
         return;
     }
 
     let anos = hoje.getFullYear() - dataNascimento.getFullYear();
     let meses = hoje.getMonth() - dataNascimento.getMonth();
     let dias = hoje.getDate() - dataNascimento.getDate();
+
+
+    
+
+        
 
     if (dias < 0) {
         meses--;
@@ -42,12 +51,14 @@ function calcularIdade() {
 
     document.getElementById('resultado').style.color = "black";
 
-    // APAGAR DEPOIS TALVEZ
-    document.getElementById('resultado').textContent = `${anos} anos, e ${meses} meses e X dias`;
-    
-    const calculo = document.getElementById('resultado').textContent = `${anos} anos, e ${meses} meses e X dias`;
-
+    // APAGAR DEPOIS TALVEZ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    const calculo = `${anos} anos, e ${meses} meses e ${dias} dias`;
+    document.getElementById('resultado').textContent = calculo;
     localStorage.setItem("calculo", calculo);
+    if (status === "ok") {
+         tabela();
+    }
+
     
 
 }
