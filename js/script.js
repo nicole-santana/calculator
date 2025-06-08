@@ -41,5 +41,13 @@ function calcularIdade() {
     const totalMeses = anos * 12 + meses;
 
     document.getElementById('resultado').style.color = "black";
-    document.getElementById('resultado').textContent = `Você tem aproximadamente ${totalMeses} meses (${anos} anos e ${meses} meses)`;
+
+    // APAGAR DEPOIS TALVEZ
+    document.getElementById('resultado').textContent = `${anos} anos, e ${meses} meses e X dias`;
+    
+    const calculo = document.getElementById('resultado').textContent = `${anos} anos, e ${meses} meses e X dias`;
+
+    localStorage.setItem("calculo", calculo);
+    
+
 }

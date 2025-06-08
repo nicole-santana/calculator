@@ -11,9 +11,10 @@
     
         <label for="nascimento">Digite sua data de nascimento:</label>
         <input type="date" id="nascimento">
-        <button onclick="calcularIdade()">Calcular</button>
+        <button onclick="calcularIdade(); tabela();">Calcular</button>
 
         <p id="resultado" style="color: red;"></p>
+        <p id="testeInput"></p>
     </header>
     
 
@@ -22,12 +23,18 @@
             <tr>
                 <th>Data</th>
                 <th>Cálculo</th>
+                <th>Ações</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="corpoTabela">
             <tr>
                 <td>Teste data</td>
                 <td>Teste Cálculo</td>
+                <td>
+                    <button>Excluir</button>
+                    <button>Atualizar</button>
+                </td>
+
             </tr>
         </tbody>
     </table>
