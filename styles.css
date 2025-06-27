@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-    --branco-fraco: #f2f4ff;
-    --verde-escuro: #011936;
-    --verde-claro: #35605A;
+    --branco-fraco: #F4FFFD;
+    --azul: #084887;
+    --laranja: #F58A07;
 }
 
 body {
@@ -18,23 +18,25 @@ body {
     
 }
 
-h1, p, input {
-    color: var(--verde-escuro);
+h1, p, input, label {
+    color: var(--azul);
+    justify-content: center;
 
 }
 
 input {
     background-color: var(--branco-fraco);
-    border-color: var(--verde-escuro);
-    color: var(--verde-escuro);
+    border-color: var(--laranja);
+    color: var(--azul);
     font-family: "DM Sans", sans-serif;
  
 }
 
 button {
-    background-color: var(--verde-escuro);
+    background-color: var(--laranja);
     color: var(--branco-fraco);
     font-family: "DM Sans", sans-serif;
+    border-color: var(--azul);
 }
 
 header {
@@ -46,16 +48,16 @@ header {
 
 
 table {
-    color: var(--verde-escuro);
+    color: var(--azul);
     padding-inline: 15rem;
     
     width: 75%;
-    border-color: var(--verde-claro);
+    border-color: var(--laranja);
     border-collapse: collapse;
 
 }
 
 td, th {
-    text-align: center; /* Horizontally center text */
+    text-align: center; 
     vertical-align: middle;
 }

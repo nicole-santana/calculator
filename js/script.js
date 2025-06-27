@@ -5,7 +5,7 @@ function calcularIdade() {
     let status = "ok";
 
     if (!valor) {
-        document.getElementById('resultado').style.color = "#35605a";
+        document.getElementById('resultado').style.color = "#084887";
         document.getElementById('resultado').style.fontWeight = "700";
         document.getElementById('resultado').style.textDecoration = "underline";
         document.getElementById('resultado').textContent = "Por favor, insira uma data válida.";
@@ -17,7 +17,7 @@ function calcularIdade() {
     const hoje = new Date();
 
     if (dataNascimento > hoje) {
-        document.getElementById('resultado').style.color = "#35605a";
+        document.getElementById('resultado').style.color = "#084887";
         document.getElementById('resultado').style.fontWeight = "700";
         document.getElementById('resultado').style.textDecoration = "underline";
 
@@ -49,12 +49,11 @@ function calcularIdade() {
 
     const totalMeses = anos * 12 + meses;
 
-    document.getElementById('resultado').style.color = "black";
+    document.getElementById('resultado').style.color = "#084887";
 
-    // APAGAR DEPOIS TALVEZ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     const calculo = `${anos} anos, e ${meses} meses e ${dias} dias`;
-    document.getElementById('resultado').textContent = calculo;
-    localStorage.setItem("calculo", calculo);
+    document.getElementById('resultado').textContent = "";
+    localStorage.setItem("calc", calculo);
     if (status === "ok") {
          tabela();
     }
