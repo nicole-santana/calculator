@@ -54,8 +54,10 @@ function calcularIdade() {
     const calculo = `${anos} anos, e ${meses} meses e ${dias} dias`;
     document.getElementById('resultado').textContent = "";
     localStorage.setItem("calc", calculo);
+
+    // Somente se não tiver nenhuma mensagem de erro, eu executo a função
     if (status === "ok") {
-         tabela();
+        tabela();
     }
 
     
